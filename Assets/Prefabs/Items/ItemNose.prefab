@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2861389615385895100, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3096383778634577873, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.47
@@ -115,4 +119,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.73
+  m_Radius: 1.04

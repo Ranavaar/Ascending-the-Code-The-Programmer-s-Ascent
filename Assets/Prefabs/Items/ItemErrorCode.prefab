@@ -24,6 +24,14 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2861389615385895100, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096383778634577873, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 3096383778634577873, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1
@@ -74,15 +82,15 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8667498021684291062, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 178723005804156589}
+      addedObject: {fileID: 4483192676715385663}
   m_SourcePrefab: {fileID: 100100000, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
 --- !u!1 &3174819733580445997 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8667498021684291062, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
   m_PrefabInstance: {fileID: 6072569998127324379}
   m_PrefabAsset: {fileID: 0}
---- !u!70 &178723005804156589
-CapsuleCollider2D:
+--- !u!58 &4483192676715385663
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,6 +121,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00847173, y: 0.011296332}
-  m_Size: {x: 1.6216185, y: 1.5369214}
-  m_Direction: 1
+  m_Offset: {x: 0.003, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.015

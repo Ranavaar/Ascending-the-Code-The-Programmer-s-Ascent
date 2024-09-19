@@ -14,7 +14,7 @@ public class Jetpack : MonoBehaviour
 
     #region Properties
 
-    public float Energy { get; set; }
+    [field: SerializeField] public float Energy { get; set; }
     public bool Flying { get; set; }
 
     #endregion
@@ -75,7 +75,7 @@ public class Jetpack : MonoBehaviour
     {
         Energy += _energyRegenerationRatio;
     }    
-    public void ItemModifiesEnergy(float energy)
+    public void EnergyModification(float energy)
     {
         Energy += energy;
         Energy -= energy;
@@ -105,6 +105,13 @@ public class Jetpack : MonoBehaviour
         }
         else
             Flying = false;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+            Regenerate();
+        if (collision.gameObject.tag == "Plataform")
+            Regenerate();
     }
 
     #endregion

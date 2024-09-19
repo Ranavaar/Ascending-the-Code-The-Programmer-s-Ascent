@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 436479524218164334}
   m_Layer: 0
   m_Name: SlicePlataf.Center
-  m_TagString: Untagged
+  m_TagString: Plataform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

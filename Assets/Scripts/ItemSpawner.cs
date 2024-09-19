@@ -70,6 +70,10 @@ public class ItemSpawner : MonoBehaviour
 
         float torqueforce = Random.Range(-70f, 70f);
         newItem.GetComponent<Rigidbody2D>().AddTorque(torqueforce);
+
+        if (_maxSpawnTime > _minSpawnTime)
+            _maxSpawnTime -= 0.05f;
+       
     }
     #endregion
 
