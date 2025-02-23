@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class openGround : MonoBehaviour
+{
+    public Collider2D ground;
+    // Start is called before the first frame update
+    void Start()
+    {
+       ground.enabled = false;
+    }
+   
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+           if(ground == enabled)
+           {
+                ground.enabled = false;
+           }
+        }
+    }
+}

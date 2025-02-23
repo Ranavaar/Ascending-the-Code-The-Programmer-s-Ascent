@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: <Type>k__BackingField
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2908833392724395971, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3096383778634577873, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -324,13 +328,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemDetermination
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8667498021684291062, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
+      propertyPath: m_TagString
+      value: ItemBonus
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2908833392724395971, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3096383778634577873, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       insertIndex: -1
       addedObject: {fileID: 153722347389132497}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8667498021684291062, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 4322248424044092800}
     - targetCorrespondingSourceObject: {fileID: 8667498021684291062, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5196487646126031595}
@@ -340,6 +352,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8667498021684291062, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
   m_PrefabInstance: {fileID: 6072569998127324379}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4322248424044092800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3174819733580445997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 526abda222292df4289274d10c48c47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Type>k__BackingField: 4
+  _particles: {fileID: 8126960082673424549, guid: 2e83483402b7858469dc33c38a218cbf, type: 3}
 --- !u!58 &5196487646126031595
 CircleCollider2D:
   m_ObjectHideFlags: 0

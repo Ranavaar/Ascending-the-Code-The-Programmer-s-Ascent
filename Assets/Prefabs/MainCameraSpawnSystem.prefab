@@ -271,6 +271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7364770308685099924}
+  - component: {fileID: 3720984205204557355}
   m_Layer: 0
   m_Name: ItemSpawn
   m_TagString: Untagged
@@ -293,6 +294,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7666981396339079855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3720984205204557355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6943696250660105565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582738298d6f3044e9b8f66b5554ef6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minSpawnTime: 1
+  _maxSpawnTime: 7
+  _spawnList:
+  - {fileID: 4322248424044092800, guid: a041afdd6ea03a747acf30540239dbc9, type: 3}
+  - {fileID: 7255719491079636202, guid: 7f9354392cf970a498ebdae3c2ced200, type: 3}
+  - {fileID: 1501235665993458586, guid: 0b020b1df1ffd0a4ba260df3334b7222, type: 3}
+  - {fileID: 1233669165462342840, guid: 6eb86f946ec1db548b6531facda508a4, type: 3}
+  - {fileID: 4284803463177674607, guid: 6ae17ffb9ab5d044d8a8ea550f11575a, type: 3}
+  - {fileID: 4349328544871222086, guid: dfba50537db0cfb418e65aa7fe912514, type: 3}
 --- !u!1 &9104537908496765585
 GameObject:
   m_ObjectHideFlags: 0

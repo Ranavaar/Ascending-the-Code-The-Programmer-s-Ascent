@@ -246,16 +246,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1610132564721431687, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       propertyPath: m_Size.x
-      value: 7.6799994
+      value: 5.12
       objectReference: {fileID: 0}
     - target: {fileID: -1610132564721431687, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       propertyPath: m_Size.y
-      value: 4.3199997
+      value: 5.12
       objectReference: {fileID: 0}
     - target: {fileID: -1610132564721431687, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0fd92f46c97cc74f858e8b9c163c95d, type: 3}
+      objectReference: {fileID: 21300000, guid: 761ed7438d94c334fbbc1285e2ee3d34, type: 3}
     - target: {fileID: -1610132564721431687, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -320,7 +320,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemInspiration
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8667498021684291062, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
+      propertyPath: m_TagString
+      value: ItemBonus
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2908833392724395971, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3096383778634577873, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
@@ -328,16 +333,33 @@ PrefabInstance:
       addedObject: {fileID: 3660726400895815316}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8667498021684291062, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1233669165462342840}
+    - targetCorrespondingSourceObject: {fileID: 8667498021684291062, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8910389111335440974}
+      addedObject: {fileID: 2077421372185854606}
   m_SourcePrefab: {fileID: 100100000, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
 --- !u!1 &3174819733580445997 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8667498021684291062, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}
   m_PrefabInstance: {fileID: 6072569998127324379}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &8910389111335440974
-CircleCollider2D:
+--- !u!114 &1233669165462342840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3174819733580445997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12ab8a3773142a4c8c2734d95ecc6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Type>k__BackingField: 4
+  _particles: {fileID: 8126960082673424549, guid: 27e1323c7d6c4fe44b6f3a18f2770885, type: 3}
+--- !u!70 &2077421372185854606
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -368,9 +390,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: 0.055}
-  serializedVersion: 2
-  m_Radius: 1.02
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.15, y: 2.05}
+  m_Direction: 0
 --- !u!4 &9132889485730212618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3096383778634577873, guid: 56dbb5aadcf53a14b936eb96afd7d689, type: 3}

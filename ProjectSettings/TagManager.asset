@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Plataform
   - Ground
+  - Item
+  - ItemBonus
+  - Plataform5
   layers:
   - Default
   - TransparentFX
@@ -13,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Light
   - 
   - 
   - 
@@ -42,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Light
+    uniqueID: 4291477147
     locked: 0
