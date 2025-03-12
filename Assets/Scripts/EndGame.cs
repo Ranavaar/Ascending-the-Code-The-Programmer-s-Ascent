@@ -28,8 +28,10 @@ public class EndGame : MonoBehaviour
 			{
 				audio.Stop();
 			}
+			float timer = Time.time / 60;
+			int time = (int)timer;
 			Time.timeScale = 0;
-			_scoreText.text = "Time Score : " + Time.time.ToString();
+			_scoreText.text = "Time Score : " + time.ToString();
 		}
 	}
 	#endregion
