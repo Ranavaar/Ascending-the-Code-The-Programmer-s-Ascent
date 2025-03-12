@@ -6,11 +6,6 @@ using Random = UnityEngine.Random;
 
 public class ItemSpawner : MonoBehaviour
 {
-    #region Properties
-
-    #endregion
-
-
     #region Fields
     [SerializeField] private float _minSpawnTime = 1;
     [SerializeField] private float _maxSpawnTime = 1;
@@ -19,18 +14,12 @@ public class ItemSpawner : MonoBehaviour
     private float _cronoTime = 0;
     #endregion
 
-
     #region Unity Callbacks
-
-    // Start is called before the first frame update
     void Start()
     {
         ResetTime();
     }
 
-   
-
-    // Update is called once per frame
     void Update()
     {
         _cronoTime += Time.deltaTime;
@@ -38,20 +27,9 @@ public class ItemSpawner : MonoBehaviour
         {
             SpawnItem();
             ResetTime();
-
         }
-
     }
-
-   
-
     #endregion
-
-
-    #region Public Methods
-
-    #endregion
-
 
     #region Private Methods
     private void ResetTime()
@@ -73,7 +51,6 @@ public class ItemSpawner : MonoBehaviour
 
         if (_maxSpawnTime > _minSpawnTime)
             _maxSpawnTime -= 0.05f;
-       
     }
     #endregion
 

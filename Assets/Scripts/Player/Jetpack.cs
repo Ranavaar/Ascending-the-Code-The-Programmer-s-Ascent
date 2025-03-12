@@ -7,15 +7,16 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Jetpack : MonoBehaviour
 {
-    public enum Direction
+	#region Enum
+	public enum Direction
     {
         Left, 
         Right
     }
+	#endregion
 
-    #region Properties
-
-    public float Energy
+	#region Properties
+	public float Energy
     { 
         get
         { 
@@ -29,47 +30,37 @@ public class Jetpack : MonoBehaviour
     public bool Flying { get; set; }
     public bool Running;
     public bool Falling;
-    public bool _isGrounded;    
-
+    public bool IsGrounded;    
     #endregion
 
-
     #region Fields
-
     private Rigidbody2D _targetRB;
     [SerializeField] private Slider _energySlider;
     [SerializeField] private AudioSource _flyAudio;
     [SerializeField] private AudioSource _regenerationAudio;
     [SerializeField] private GameObject _particlesFire;
     [SerializeField] private GameObject _particlesEnergy;
-    [SerializeField] private float _energy;
+    [SerializeField] private EndGame _endGame;
+	[SerializeField] private float _energy;
     [SerializeField] private float _maxEnergy;
     [SerializeField] private float _energyFlyingRatio;
     [SerializeField] private float _energyRegenerationRatio;
     [SerializeField] private float _horizontalForze;
     [SerializeField] private float _flyForce;
-    [SerializeField] private float _VxMax = 15;
-    [SerializeField] private float _VyMax = 1000;
     [SerializeField] private float _VxCurrent;
     [SerializeField] private float _VyCurrent;
-
     #endregion
 
-
     #region Unity Callbacks
-
     private void Awake()
     {
         _targetRB = GetComponent<Rigidbody2D>();
     }
-
-    // Start is called before the first frame update
     void Start()
     {
         Energy = _maxEnergy;
+		_endGame.OnJetpackSoundOff += JetpackSoundOff;
     }
-
-    // Update is called once per frame
     void Update()
     {
         float move = Input.GetAxis("Horizontal");
@@ -102,32 +93,10 @@ public class Jetpack : MonoBehaviour
                 Instantiate(_particlesEnergy, transform.position, Quaternion.identity);           
         }
 
-        //if (-_VyCurrent > -_VyMax)
-        //{
-        //    float correctiveForce = (-_VyCurrent - -_VyMax);
-        //    _targetRB.AddForce(new Vector2(0, correctiveForce), ForceMode2D.Force);
-        //}
-        //if (_VyCurrent > _VyMax)
-        //{
-        //    float correctiveForce = (_VyCurrent - _VyMax) * -6;
-        //    _targetRB.AddForce(new Vector2(0, correctiveForce), ForceMode2D.Force);
-        //}
-        //if (_VxCurrent > _VxMax)
-        //{
-        //    float correctiveForce = (_VxCurrent - _VxMax) * -1;
-        //    _targetRB.AddForce(new Vector2(correctiveForce, 0), ForceMode2D.Force);
-        //}
-        
-
-
-
     }   
-
     #endregion
 
-
     #region Public Methods
-
     public void FlyUp()
     {
         if(_energy > 0)
@@ -204,13 +173,9 @@ public class Jetpack : MonoBehaviour
             GetComponent<SpriteRenderer>().flipX = false;
         }
     }
-    
-
     #endregion
 
-
     #region Private Methods
-
     private void Fly()
     {
         if (Energy > 0)
@@ -223,16 +188,19 @@ public class Jetpack : MonoBehaviour
         else
             Flying = false;        
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Plataform")
-            _isGrounded = true;
+            IsGrounded = true;
         else
-            _isGrounded = false;
+            IsGrounded = false;
+
         if (collision.gameObject.tag == "Plataform5")
             Energy += 25;
     }
-
+    private void JetpackSoundOff()
+    {
+        _flyAudio.enabled = false;
+    }
     #endregion
 }

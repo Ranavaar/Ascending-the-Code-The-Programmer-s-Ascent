@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class openGround : MonoBehaviour
 {
-    public Collider2D ground;
-    // Start is called before the first frame update
-    void Start()
+	#region Fields
+	[SerializeField]public Collider2D ground;
+	#endregion
+
+	#region Unity CallBacks
+	void Start()
     {
        ground.enabled = false;
     }
-   
-    private void OnTriggerEnter2D(Collider2D collision)
+	private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -22,4 +24,5 @@ public class openGround : MonoBehaviour
            }
         }
     }
+	#endregion
 }

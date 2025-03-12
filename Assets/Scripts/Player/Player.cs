@@ -4,37 +4,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    #region Properties
-
-    #endregion
-
-
     #region Fields
     [SerializeField] private Jetpack _jetpack;
     private Animator _playerAnim;
     #endregion
 
-
     #region Unity Callbacks
-
     private void Awake()
     {
         _playerAnim = GetComponent<Animator>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    } 
     void Update()
     {
         _playerAnim.SetBool("Flying", _jetpack.Flying);
-        _playerAnim.SetBool("Falling", _jetpack.Falling);
-        if(_jetpack._isGrounded)
-            _playerAnim.SetBool("Run", _jetpack.Running);
+        _playerAnim.SetBool("Falling", _jetpack.Falling);       
+        _playerAnim.SetBool("Run", _jetpack.Running && _jetpack.IsGrounded);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -46,21 +30,6 @@ public class Player : MonoBehaviour
         {
             _playerAnim.SetTrigger("Bonused");
         }
-       
-
-
     }
-
     #endregion
-
-
-    #region Public Methods
-
-    #endregion
-
-
-    #region Private Methods
-
-    #endregion
-
 }

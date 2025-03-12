@@ -30,7 +30,6 @@ public class Item : MonoBehaviour, IRecolectable
         Destroy(gameObject);
         CreateParticles();
     }
-
     #endregion
 
     #region Private Methods
@@ -38,8 +37,6 @@ public class Item : MonoBehaviour, IRecolectable
     {
         Instantiate(_particles, transform.position, Quaternion.identity);
     }
-
-
     #endregion
 
 }

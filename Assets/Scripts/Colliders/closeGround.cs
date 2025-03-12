@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class closeGround : MonoBehaviour
 {
-    public Collider2D ground;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	#region Fields
+	[SerializeField]private Collider2D ground;
+	#endregion
 
-    private void OnTriggerEnter2D(Collider2D collision)
+	#region Unity CallBacks
+	private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
             ground.enabled = true;
 
     }
+	#endregion
 }

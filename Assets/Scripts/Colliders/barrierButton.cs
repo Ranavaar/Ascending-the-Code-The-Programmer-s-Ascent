@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class barrierButton : MonoBehaviour
 {
-    
-    public GameObject closeBarrier;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	#region Fields
+	[SerializeField]private GameObject closeBarrier;
+	#endregion
 
+	#region Unity CallBacks
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -21,4 +18,5 @@ public class barrierButton : MonoBehaviour
             
         }
     }
+	#endregion
 }

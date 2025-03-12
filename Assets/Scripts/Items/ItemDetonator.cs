@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class ItemDetonator : MonoBehaviour
 {
-    [SerializeField] private Collider2D _itemsDeathZone;
+	#region Fields
+	[SerializeField] private Collider2D _itemsDeathZone;
+	#endregion
 
+	#region Unity CallBacks
     private void Start()
     {
         _itemsDeathZone.enabled = false;
     }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
+	private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
             _itemsDeathZone.enabled = true;
     }
+	#endregion
 }
